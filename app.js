@@ -8,6 +8,8 @@ import bodyParser from 'body-parser';
 import fileUpload from 'express-fileupload';
 import { videoRoutes } from './routes/video.rout.js';
 import { commentRout } from './routes/comment.rout.js';
+import cors from 'cors'
+
 
 
 const connectWithDB=async()=>{
@@ -22,7 +24,7 @@ const connectWithDB=async()=>{
 connectWithDB()
 
 
-
+app.use(cors())
 app.use(bodyParser.json());
 app.use(fileUpload({
        useTempFiles:true,
