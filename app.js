@@ -24,12 +24,11 @@ const connectWithDB=async()=>{
 connectWithDB()
 
 
-app.use(cors())
-app.use(bodyParser.json());
+app.use(cors());
 app.use(fileUpload({
-       useTempFiles:true,
-       // tempFileDir:'/tmp/'
+    useTempFiles: true,
 }));
+app.use(bodyParser.json());
 
 
 app.use('/user',userRouter)
