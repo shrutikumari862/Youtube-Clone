@@ -6,5 +6,5 @@ dotenv.config();
 
 const server=http.createServer(app)
 server.listen(process.env.PORT,()=>{
-    console.log(`app is running on port ${port}`)
+    console.log(`app is running on port ${process.env.PORT}`)
 })
