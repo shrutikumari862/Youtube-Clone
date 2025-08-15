@@ -33,6 +33,7 @@ userRouter.post('/signUp',async(req,res)=>{
         }
         
        const hashCode=await bcrypt.hash(req.body.password,10)
+       
        const uploadedImage=await cloudinary.uploader.upload(req.files.logo.tempFilePath)
        
        const newUser=new User({
