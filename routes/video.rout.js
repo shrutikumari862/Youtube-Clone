@@ -4,6 +4,7 @@ import jwt from 'jsonwebtoken'
 import { checkLogin } from '../middleware/checkAuth.js'
 import cloudinary from 'cloudinary'
 import { Video } from '../models/Video.model.js'
+import { User } from '../models/User.model.js'
 import mongoose from 'mongoose'
 
 
@@ -13,6 +14,23 @@ cloudinary.config({
     api_secret:process.env.CLOUDINARY_API_SECRET
 })
 
+
+videoRoutes.get('/own-video',checkLogin,async(req,res)=>{
+  try {
+    const verifiedUser= await jwt.verify(req.headers.authorization.split(' ')[1],'shruti123');
+    console.log(verifiedUser)
+    const videos=await Video.find({userID:verifiedUser._id})
+    console.log(videos)
+    res.status(200).json({
+      videos:videos
+    })
+  } catch (error) {
+    console.log(error)
+    res.status(500).json({
+      ERROR:`ERROR IN GET OWB-VIDEO ROUT ${error}`
+    })
+  }
+})
 
 videoRoutes.post('/upload',checkLogin,async(req,res)=>{
    try {
