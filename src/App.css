@@ -1,0 +1,144 @@
+.main-wrapper{
+width: 100%;
+height: 100vh;
+background-color: rgb(35, 32, 32);
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.form-wrapper{
+    width: 50%;
+    height: 70vh;
+    background-color: rgb(22, 21, 21);
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 12px;
+    box-shadow: 5px 5px 15px rgb(62,61,61);
+
+    
+}
+.c-name{
+  color:rgb(210,21,21)
+}
+.wrapper-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo-image{
+    width: 10%;
+}
+.form-wrapper input{
+    width: 80%;
+    padding: 10px;
+    border: none;
+    height: 50px;
+    border-radius: 5px;
+}
+.form-wrapper button{
+    height: 50px;
+    padding: 10px;
+    border: none;
+    background-color: rgb(227, 11, 11);
+    color: white;
+    border-radius: 5px;
+}
+.uploaded-image{
+   
+    height: 40%;
+    border-radius: 5px;
+}
+.link{
+    color:white;
+    text-decoration: none;
+    margin-top:10px ;
+}
+
+.dashboard-container{
+width: 100%;
+min-height: 100vh;
+background-color: rgb(35, 32, 32);
+display: flex;
+color:white
+}
+.side-nav{
+    width: 20%;
+    background-color: rgb(13,12,12);
+    padding: 10px;
+}
+.content-container{
+    width: 80%;
+    padding: 10px;
+}
+.logo-image{
+    width: 100px;
+    border-radius: 50%;
+}
+.profile-container img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 5px 5px 15px rgb(62,61,61);
+}
+.profile-container{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+}
+.menu-container{
+    width: 100%;
+     margin-top: 100px; 
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+}
+.menu-link{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+
+}
+.active-menu-link{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+    background-color: rgb(204,8,8);
+}
+.menu-link:hover{
+    background-color: red;
+}
+.uploaded-file{
+    height: 200px;
+    width: 200px;
+    
+}
+.video-div{
+   display :flex ;
+   
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+   gap: 20px;
+   border-radius: 20px;
+
+}
+.video-div img{
+    height: 300px;
+    width: 300px;
+    border-radius: 20px;
+
+   
+}
